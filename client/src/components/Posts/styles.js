@@ -4,6 +4,7 @@ export default makeStyles((theme) => ({
   mainContainer: {
     display: 'flex',
     alignItems: 'center',
+    flexDirection: 'column-reverse'
   },
   smMargin: {
     margin: theme.spacing(1),
@@ -11,4 +12,9 @@ export default makeStyles((theme) => ({
   actionDiv: {
     textAlign: 'center',
   },
+  [theme.breakpoints.down('sm')]: {
+    mainContainer: {
+      flexDirection: 'column-reverse'
+    }
+  }
 }));
